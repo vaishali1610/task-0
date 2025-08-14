@@ -28,6 +28,12 @@ int main (){
   ofstream file2(dest, ios::binary);
   file2 << file1.rdbuf();
         }
+        //case 5: overwrtiting
+        else{
+             ofstream file2(dest, ios::binary | ios::trunc);
+               file2 << file1.rdbuf(); 
+               cout << "Data overwritten";
+        }
 }
 
 
